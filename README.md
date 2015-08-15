@@ -2,7 +2,7 @@
 Admin Portal for xoom training application
 
 
-# generator-gulp-angular ![Logo](app/templates/src/assets/images/generator-gulp-angular-logo.png)
+# generator-gulp-angular
 
 [![Build Status](https://img.shields.io/travis/Swiip/generator-gulp-angular/master.svg?style=flat)](http://travis-ci.org/Swiip/generator-gulp-angular)
 [![Coverage Status](http://img.shields.io/coveralls/Swiip/generator-gulp-angular.svg?style=flat)](https://coveralls.io/r/Swiip/generator-gulp-angular?branch=master)
@@ -57,32 +57,6 @@ yo gulp-angular
 * More informations about how to use your new project is available in the [docs/user-guide](docs/user-guide.md)
 * If you want to know: [docs/how-it-works](docs/how-it-works.md).
 
-
-## Features
-
-![Logo](docs/assets/gulp.png)
-![Logo](docs/assets/angular.png)
-![Logo](docs/assets/bootstrap.png)
-![Logo](docs/assets/materialdesign.png)
-![Logo](docs/assets/foundation.png)
-![Logo](docs/assets/bower.png)
-![Logo](docs/assets/webpack.png)
-![Logo](docs/assets/karma.png)
-![Logo](docs/assets/istanbul.png)
-![Logo](docs/assets/browsersync.png)
-![Logo](docs/assets/jasmine.png)
-![Logo](docs/assets/protractor.png)
-
-![Logo](docs/assets/babel.png)
-![Logo](docs/assets/coffeescript.png)
-![Logo](docs/assets/typescript.png)
-![Logo](docs/assets/traceur.png)
-![Logo](docs/assets/sass.png)
-![Logo](docs/assets/less.png)
-![Logo](docs/assets/stylus.png)
-![Logo](docs/assets/jade.png)
-![Logo](docs/assets/haml.png)
-![Logo](docs/assets/handlebars.png)
 
 [List features included](docs/usage.md#features-included-in-the-gulpfile)
 
