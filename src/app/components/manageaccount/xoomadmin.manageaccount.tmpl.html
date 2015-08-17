@@ -1,0 +1,210 @@
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+           <a href="coursedetails.html"><img src="assets/images/logo.png" align="left"></a>
+         </div>
+         <div class="col-md-6">
+          <strong>Email: </strong>contact@xoomtrainings.com
+          <br/>
+          <strong>Support: </strong>+1-610-686-8077
+        </div>
+      </div>
+    </header>
+    <div id="wrapper">
+      <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a  class="navbar-brand" href="coursedetails.html">XoomTrainings Admin Page </a>
+        </div>
+      </nav>
+    </div>
+    <!-- /. NAV TOP  -->
+    <div class="row">
+      <div class="col-md-2">
+        <div class="sidebar-collapse">
+          <ul class="nav nav-stacked" role="tablist">
+            <li class="active"><a href="#addcourse" role="tab" data-toggle="tab"><i class="fa fa-dashboard "></i>Courses Details</a></li>
+            <li><a href="#coursespec" role="tab" data-toggle="tab"><i class="fa fa-bolt "></i>Course Specification </a></li>
+            <li><a href="#managetrainings" role="tab" data-toggle="tab"><i class="fa fa-dashcube "></i>Manage Trainings</a></li>
+            <li><a href="#manageusers" role="tab" data-toggle="tab"><i class="fa fa-clipboard"></i>Manage Users</a></li>
+            <li><a href="#managecourses" role="tab" data-toggle="tab"><i class="fa fa-clipboard"></i>Manage Courses</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div class="tab-content">
+          <div class="tab-pane fade active" id="addcourse">
+            <form name="createcourse" novalidate>
+              <div class="col-md-6">
+                <div class="form-group clearfix">
+                  <label class="marginbottom">Course Name<span class="mandatory">*</span> :</label>
+                  <input type="text" name="coursename" ng-model="coursename" class="form-control" ng-required="true" />
+                </div>
+                <div class="form-group clearfix">
+                  <label class="marginbottom">Course Duration(hrs)<span class="mandatory">*</span> :</label>
+                  <input type="text" name="courseduration" ng-model="courseduration" class="form-control" ng-required="true" />
+                </div>
+                <div class="form-group clearfix">
+                  <label class="marginbottom">Course Price(inr)<span class="mandatory">*</span> :</label>
+                  <input type="text" name="priceinr" ng-model="priceinr" class="form-control" ng-required="true" />
+                </div>
+                <div class="form-group clearfix">
+                  <label class="marginbottom">Course Description<span class="mandatory">*</span> :</label>
+                  <textarea name="coursedescption" rows="3" ng-model="coursedescription" class="form-control" ng-required="true"></textarea>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="marginbottom">Start date<span class="mandatory">*</span> :</label>
+                  <input  type="date" name="startdate" ng-model="startdate" class="form-control" ng-required="true" />
+                </div>
+                <div class="form-group clearfix">
+                  <label class="marginbottom">Start Time<span class="mandatory">*</span> :</label>
+                  <input  type="time" name="startime" ng-model="starttime" class="form-control" ng-required="true" />
+                </div>
+                <div class="form-group clearfix">
+                  <label class="marginbottom">Course Image Upload<span class="mandatory">*</span> :</label> 
+                  <input type="file" name="imgFile"/><br/>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group clearfix">
+                  <label class="marginbottom">Course Category<span class="mandatory">*</span> :</label>
+                  <input type="text" name="coursecategory" class="form-control" ng-model="coursecategory" ng-required="true" />
+                </div>
+                <div class="form-group clearfix">
+                  <label class="marginbottom">Course Price(usd)<span class="mandatory">*</span> :</label>
+                  <input type="text" name="usprice" ng-model="usprice" class="form-control" ng-required="true" />
+                </div>
+                <div class="form-group clearfix">
+                  <label class="marginbottom">Course Learners<span class="mandatory">*</span> :</label>
+                  <input type="text" name="courselearners" ng-model="courselearners" class="form-control" ng-required="true" />
+                </div>
+                <div class="form-group clearfix">
+                  <label class="marginbottom">Course Detail Description<span class="mandatory">*</span> :</label>
+                  <textarea rows="3" name="coursedetaildescription" ng-model="coursedetaildescription" class="form-control" ng-required="true"></textarea>
+                </div>
+                <div class="form-group clearfix">
+                  <label class="marginbottom">Course Days<span class="mandatory">*</span> :</label>
+                  <input type="text" name="coursedays" ng-model="coursedays" class="form-control" ng-required="true" />
+                </div>
+                <div class="form-group clearfix">
+                  <label class="marginbottom">End Time<span class="mandatory">*</span> :</label>
+                  <input type="time" name="endtime" class="form-control" ng-model="endtime" ng-required="true" />
+                </div>
+              </div>
+              <div class="col-md-12">
+                <button class="btn btn-primary marginbottom">Save</button>
+                <button class="btn btn-default marginbottom">Reset</button>
+              </div>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="coursespec">
+            <form name="coursespecform" novalidate>
+              <div class="form-group">
+                <label>Course content<span class="mandatory">*</span> :</label>
+                <textarea rows="3" name="coursecontent" ng-model="coursecontent" class="form-control" ng-validate="true" /></textarea>
+              </div>
+              <div class="form-group">
+                <label>Curriculum<span class="mandatory">*</span> :</label>
+                <textarea rows="3" name="curiculum" ng-mode="curriculum" class="form-control" ng-validate="true" /></textarea>
+              </div>
+              <div class="form-group">
+                <label>Frequently asked questions<span class="mandatory">*</span> :</label>
+                <table id="dataTable" class="table-responsive" width="1050px">
+                  <tr>
+                    <td><input type="checkbox" name="chk"></td>
+                    <td><textarea rows="2" name="question" placeholder="Question" ng-model="question" class="form-control marginbottom" /></textarea></td>
+                    <td><textarea rows="2" name="answer" placeholder="Answer" ng-model="answer" class="form-control marginbottom" /></textarea></td>
+                  </tr>
+                </table>
+              </div>
+              <div class="addbutton">
+                <input type="button" value="Add Question" class="btn btn-primary marginbottom" onclick="addRow('dataTable')">
+                <input type="button" value="Delete Question" class="btn btn-danger marginbottom" onclick="deleteRow('dataTable')">
+              </div>
+              <div class="form-group">
+                <label>Certification Optional<span class="mandatory">*</span> :</label>
+                <textarea rows="3" name="certification" ng-model="certification" class="form-control" ng-validate="true" /></textarea>
+              </div>
+              <div class="form-group">
+                <label>Infographic Images Optional </label>
+                <input type="file" />
+              </div>
+              <div>
+                <button class="btn btn-primary marginbottom">Save</button>
+                <button class="btn btn-default marginbottom">Reset</button>
+              </div>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="managetrainings">Manage Trainings</div>
+          <div class="tab-pane fade" id="manageusers">Manage users</div>
+          <div class="tab-pane fade" id="managecourses">Manage Courses</div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p align="center" > 
+       &copy; 2015 Xoomtrainings Powered by Innovin IT Solutions
+     </p>
+   </footer>
+
+   <script type="text/javascript">
+     $(document).ready(function(){
+      $('#addcourse').tab('show')
+    });
+
+     function addRow(tableID)
+     {
+      var table=document.getElementById(tableID);
+      var rowCount=table.rows.length;
+      var row=table.insertRow(rowCount);
+      var colCount=table.rows[0].cells.length;
+      for(var i=0;i<colCount;i++)
+      {
+        var newcell=row.insertCell(i);
+        newcell.innerHTML=table.rows[0].cells[i].innerHTML;
+        switch(newcell.childNodes[0].type)
+        {
+          case"text":newcell.childNodes[0].value="";
+          break;
+          case"checkbox":newcell.childNodes[0].checked=false;
+          break;
+          case"select-one":newcell.childNodes[0].selectedIndex=0;
+          break;
+        }
+      }
+    }
+    function deleteRow(tableID)
+    {
+      try
+      {
+        var table=document.getElementById(tableID);
+        var rowCount=table.rows.length;
+        for(var i=0;i<rowCount;i++)
+        {
+          var row=table.rows[i];
+          var chkbox=row.cells[0].childNodes[0];
+          if(null!=chkbox&&true==chkbox.checked)
+          {
+            if(rowCount<=1)
+            {
+              alert("Cannot delete all the rows.");
+              break;
+            }
+            table.deleteRow(i);
+            rowCount--;
+            i--;
+          }
+        }
+      }
+      catch(e)
+      {
+        alert(e);
+      }
+    }
+  </script>

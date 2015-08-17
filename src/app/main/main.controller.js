@@ -1,39 +1,24 @@
 (function() {
-  'use strict';
+	'use strict';
 
-  angular
-    .module('xoomadmin')
-    .controller('MainController', MainController);
+	angular
+	.module('xoomadmin')
+	.controller('MainController', MainController);
 
-  /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
-    var vm = this;
+	/** @ngInject */
+	function MainController($scope,$state) {
 
-    vm.awesomeThings = [];
-    vm.classAnimation = '';
-    vm.creationDate = 1439624404197;
-    vm.showToastr = showToastr;
 
-    activate();
+		// Login admin portal
+		$scope.adminLogin = function(invalid){
+			if(invalid){
+				alert('Please fill all mandatory fields');
+				return;
+			}
+			if($scope.username=='xoomadmin' && $scope.password=='x00m@dmin'){
+				$state.go('manageaccounts');
+			}
+		}
+	}
 
-    function activate() {
-      getWebDevTec();
-      $timeout(function() {
-        vm.classAnimation = 'rubberBand';
-      }, 4000);
-    }
-
-    function showToastr() {
-      toastr.info('Fork <a href="https://github.com/Swiip/generator-gulp-angular" target="_blank"><b>generator-gulp-angular</b></a>');
-      vm.classAnimation = '';
-    }
-
-    function getWebDevTec() {
-      vm.awesomeThings = webDevTec.getTec();
-
-      angular.forEach(vm.awesomeThings, function(awesomeThing) {
-        awesomeThing.rank = Math.random();
-      });
-    }
-  }
 })();
